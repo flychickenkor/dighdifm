@@ -4,20 +4,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f5f5f5;
+    background: #ffffff;
   }
 
   .bar-container {
-    width: 150px;
-    height: 10px;
+    max-width: 300px;
+    height: 5px;
     background: #ddd;
     position: relative;
     overflow: hidden;
     border-radius: 30px;
     position: fixed;
-    bottom: 220px;
-    right: 700px;
-    
+    bottom: 480px;
+    right: 45px;
+    z-index: 2;
   }
 
   .bar {
@@ -31,6 +31,7 @@
     transform-origin: left; 
     animation: shrink 30s linear forwards;
     border-radius: 30px;
+    z-index: 2;
   }
 
   @keyframes shrink {
@@ -41,3 +42,203 @@
       transform: scaleX(0);
     }
   }
+
+.time-number {
+  color: #4da3ff;
+  transition: color 0.3s ease;
+}
+.time-number {
+  position: fixed;
+  bottom: 460px;
+  right: 280px;
+  font-size: 12px;
+}
+
+.timer {
+  position: fixed;
+  bottom: 460px;
+  right: 145px;
+  color: #8a8a8a;
+  font-size: 12px;
+}
+
+.shadow-box {
+  background: #ffffff;         
+  color: #fff;
+  border-radius: 16px;     
+  padding: 24px;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.35),
+    0 2px 6px rgba(0, 0, 0, 0.2); 
+  
+  max-width: 300px;
+  position: absolute;
+  height: 450px;
+  top: 100px;     
+  z-index: 0;
+}
+
+#output {
+  position: fixed;
+  right: 138px;
+  font-weight:bold ;
+  font-size: 20px;
+}
+
+#saveBtn {
+  position: fixed;
+  background-color: rgba(73, 73, 73, 0.541);
+  height: 35px;
+  width: 60px;
+  font-size: 15px;
+  bottom: 10px;
+  left: 10px;
+  border-radius: 30px;
+  border: none;
+  color: #fff;
+}
+
+.whw {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
+#userInput {
+  position: fixed;
+  top: 35px;
+  left: 10px;
+}
+
+.whw2 {
+  position: fixed;
+  top: 70px;
+  left: 10px;
+}
+
+#minj1 {
+  position: fixed;
+  top: 95px;
+  left: 10px;
+}
+
+#output2 {
+  position: fixed;
+  top: 420px;
+  left: 31px;
+  font-weight: bold;
+}
+
+.wkr {
+  position: fixed;
+  bottom: 390px;
+  z-index: 2;
+  left: 100px;
+}
+
+.whw3 {
+  position: fixed;
+  top: 140px;
+  left: 10px;
+}
+
+#minj2 {
+  position: fixed;
+  top: 165px;
+  left: 10px;
+}
+
+#output3 {
+  position: fixed;
+  top: 420px;
+  left: 100px;
+  font-weight: bold;
+}
+
+
+.whw4 {
+  position: fixed;
+  top: 200px;
+  left: 10px;
+}
+
+#adr {
+  position: fixed;
+  top: 225px;
+  left: 10px;
+}
+
+#output4 {
+  position: fixed;
+  top: 445px;
+  left: 30px;
+  font-size: 12px;
+}
+
+.whw5 {
+  position: fixed;
+  top: 260px;
+  left: 10px;
+}
+
+#adr2 {
+  position: fixed;
+  top: 285px;
+  left: 10px;
+}
+
+#output5 {
+  position: fixed;
+  top: 460px;
+  left: 30px;
+  font-size: 12px;
+}
+
+.jj {
+  position: fixed;
+  z-index: 2;
+  font-size: 10px;
+  color: #4d4d4d;
+  top: 10px;
+  left: 43%;
+
+}
+
+.q {
+  position: fixed;
+  z-index: 2;
+  top: 20px;
+  left: 20px;
+}
+
+.top-box {
+  background: #ffffff;         
+  color: #fff;
+  border-radius: 16px;     
+  padding: 24px;
+  max-width: 500px;
+  position: fixed;
+  height: 30px;
+  width: 500px;
+  top: 0px;   
+  left: -20px;  
+  z-index: 2;
+}
+
+
+.out {
+  position: fixed;
+  bottom: 345px;
+  left: 40px;
+  font-size: 10px;
+  z-index: 3;
+}
+
+.tlwkd {
+  position: fixed;
+  bottom: 320px;
+  left: 39px;
+  font-size: 10px;
+  color: grey;
+  z-index: 3;
+}
