@@ -1,244 +1,123 @@
+@media (max-width: 768px) {
+
+  /* body 중앙정렬 제거 */
   body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #ffffff;
+    display: block;
+    height: auto;
   }
 
-  .bar-container {
-    max-width: 300px;
-    height: 5px;
-    background: #ddd;
+  /* 메인 카드 */
+  .shadow-box {
     position: relative;
-    overflow: hidden;
-    border-radius: 30px;
-    position: fixed;
-    bottom: 480px;
-    right: 45px;
-    z-index: 2;
+    top: auto;
+    height: auto;
+    margin: 70px auto 20px;
+    max-width: 90%;
+    padding: 20px;
   }
 
-  .bar {
+  /* 상단 박스 */
+  .top-box {
     width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      90deg,
-      #2f80ff 0%,
-      #7b2cff 100%
-    );
-    transform-origin: left; 
-    animation: shrink 30s linear forwards;
-    border-radius: 30px;
-    z-index: 2;
+    max-width: 100%;
+    left: 0;
+    border-radius: 0 0 16px 16px;
   }
 
-  @keyframes shrink {
-    from {
-      transform: scaleX(1);
-    }
-    to {
-      transform: scaleX(0);
-    }
+  /* 진행 바 */
+  .bar-container {
+    position: fixed;
+    bottom: 110px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    max-width: 80%;
+    height: 6px;
   }
 
-.time-number {
-  color: #4da3ff;
-  transition: color 0.3s ease;
-}
-.time-number {
-  position: fixed;
-  bottom: 460px;
-  right: 280px;
-  font-size: 12px;
-}
+  /* 타이머 숫자 */
+  .time-number {
+    position: fixed;
+    bottom: 135px;
+    left: 20px;
+    right: auto;
+    font-size: 12px;
+  }
 
-.timer {
-  position: fixed;
-  bottom: 460px;
-  right: 145px;
-  color: #8a8a8a;
-  font-size: 12px;
-}
+  .timer {
+    position: fixed;
+    bottom: 135px;
+    right: 20px;
+    font-size: 12px;
+  }
 
-.shadow-box {
-  background: #ffffff;         
-  color: #fff;
-  border-radius: 16px;     
-  padding: 24px;
-  box-shadow:
-    0 10px 25px rgba(0, 0, 0, 0.35),
-    0 2px 6px rgba(0, 0, 0, 0.2); 
-  
-  max-width: 300px;
-  position: absolute;
-  height: 450px;
-  top: 100px;     
-  z-index: 0;
-}
+  /* 출력 텍스트 */
+  #output {
+    position: relative;
+    right: auto;
+    margin-top: 10px;
+    text-align: center;
+  }
 
-#output {
-  position: fixed;
-  right: 138px;
-  font-weight:bold ;
-  font-size: 20px;
-}
+  /* 입력 영역 정렬 */
+  .whw, .whw2, .whw3, .whw4, .whw5 {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: block;
+    margin-top: 12px;
+  }
 
-#saveBtn {
-  position: fixed;
-  background-color: rgba(73, 73, 73, 0.541);
-  height: 35px;
-  width: 60px;
-  font-size: 15px;
-  bottom: 10px;
-  left: 10px;
-  border-radius: 30px;
-  border: none;
-  color: #fff;
-}
+  #userInput,
+  #minj1,
+  #minj2,
+  #adr,
+  #adr2 {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 4px;
+  }
 
-.whw {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-}
+  /* 출력 결과들 */
+  #output2,
+  #output3,
+  #output4,
+  #output5 {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-top: 10px;
+    font-size: 12px;
+  }
 
-#userInput {
-  position: fixed;
-  top: 35px;
-  left: 10px;
-}
+  /* 저장 버튼 */
+  #saveBtn {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 40px;
+    font-size: 14px;
+  }
 
-.whw2 {
-  position: fixed;
-  top: 70px;
-  left: 10px;
-}
+  /* 기타 텍스트 */
+  .jj {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
-#minj1 {
-  position: fixed;
-  top: 95px;
-  left: 10px;
-}
+  .wkr,
+  .out,
+  .tlwkd {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    margin-top: 10px;
+    text-align: center;
+  }
 
-#output2 {
-  position: fixed;
-  top: 420px;
-  left: 31px;
-  font-weight: bold;
-}
-
-.wkr {
-  position: fixed;
-  bottom: 390px;
-  z-index: 2;
-  left: 100px;
-}
-
-.whw3 {
-  position: fixed;
-  top: 140px;
-  left: 10px;
-}
-
-#minj2 {
-  position: fixed;
-  top: 165px;
-  left: 10px;
-}
-
-#output3 {
-  position: fixed;
-  top: 420px;
-  left: 100px;
-  font-weight: bold;
-}
-
-
-.whw4 {
-  position: fixed;
-  top: 200px;
-  left: 10px;
-}
-
-#adr {
-  position: fixed;
-  top: 225px;
-  left: 10px;
-}
-
-#output4 {
-  position: fixed;
-  top: 445px;
-  left: 30px;
-  font-size: 12px;
-}
-
-.whw5 {
-  position: fixed;
-  top: 260px;
-  left: 10px;
-}
-
-#adr2 {
-  position: fixed;
-  top: 285px;
-  left: 10px;
-}
-
-#output5 {
-  position: fixed;
-  top: 460px;
-  left: 30px;
-  font-size: 12px;
-}
-
-.jj {
-  position: fixed;
-  z-index: 2;
-  font-size: 10px;
-  color: #4d4d4d;
-  top: 10px;
-  left: 43%;
-
-}
-
-.q {
-  position: fixed;
-  z-index: 2;
-  top: 20px;
-  left: 20px;
-}
-
-.top-box {
-  background: #ffffff;         
-  color: #fff;
-  border-radius: 16px;     
-  padding: 24px;
-  max-width: 500px;
-  position: fixed;
-  height: 30px;
-  width: 500px;
-  top: 0px;   
-  left: -20px;  
-  z-index: 2;
-}
-
-
-.out {
-  position: fixed;
-  bottom: 345px;
-  left: 40px;
-  font-size: 10px;
-  z-index: 3;
-}
-
-.tlwkd {
-  position: fixed;
-  bottom: 320px;
-  left: 39px;
-  font-size: 10px;
-  color: grey;
-  z-index: 3;
 }
