@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>사진 선택</title>
-
+<link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
@@ -18,7 +18,7 @@
 
     .preview {
       width: 80%;
-      max-width: 1px;
+      max-width: 100px;
       aspect-ratio: 7 / 10;
       background: #00000000;
       border-radius: 18px;
@@ -27,31 +27,44 @@
     }
 
     img {
-      width: 100%;
-      height: 100%;
+      width: 100px;
+      height: 130px;
       object-fit: contain;
+      position: fixed;
+      bottom: 90px;
+      right: 10px;
     }
 
-    label, button {
-      width: 100%;
+    label {
+      width: 20%;
       max-width: 360px;
       padding: 14px;
       margin-bottom: 10px;
       border-radius: 8px;
-      font-size: 16px;
+      font-size: 13px;
       border: none;
+      position: fixed;
+      bottom: 5px;
+      right: 10px;
     }
 
     label {
-      background: #333;
+      background: #666666b4;
       color: #fff;
       text-align: center;
+      border-radius: 30px;
     }
 
-    button {
-      background: #007aff;
+    .fin {
+      background: #2281e0;
       color: #fff;
+      border-radius: 15px;
+      bottom: 25px;
+      position: fixed;
+      border: none;
+      right: 120px;
     }
+
 
     input {
       display: none;
@@ -60,6 +73,69 @@
 </head>
 <body>
 
+  <div class="whw">이름 입력</div>
+  <textarea id="userInput" placeholder="여기에 내용을 입력하세요"></textarea><br><br>
+  <button id="saveBtn">확인</button>
+
+  <script>
+    const saveBtn = document.getElementById('saveBtn');
+    const userInput = document.getElementById('userInput');
+
+    saveBtn.addEventListener('click', () => {
+
+      localStorage.setItem('sharedContent', userInput.value);
+
+
+      window.location.href = 'index.html';
+    });
+  </script>
+
+  <div class="whw2">민증앞자리</div>
+  <textarea id="minj1" placeholder="여기에 내용을 입력하세요"></textarea><br><br>
+  <script>
+    const minj1 = document.getElementById('minj1');
+
+    saveBtn.addEventListener('click', () => {
+      localStorage.setItem('sharedContent2', minj1.value);
+      window.location.href = 'index.html';
+    })
+  </script>
+
+ <div class="whw3">민증뒷자리</div>
+  <textarea id="minj2" placeholder="여기에 내용을 입력하세요"></textarea><br><br>
+  <script>
+    const minj2 = document.getElementById('minj2');
+    
+    saveBtn.addEventListener('click', () => {
+      localStorage.setItem('sharedContent3', minj2.value);
+      window.location.href = 'index.html';
+    })
+  </script>
+
+    <div class="whw4">주소</div>
+  <textarea id="adr" placeholder="여기에 내용을 입력하세요"></textarea><br><br>
+  <script>
+    const adr = document.getElementById('adr');
+
+    saveBtn.addEventListener('click', () => {
+      localStorage.setItem('sharedContent4', adr.value);
+      window.location.href = 'index.html';
+    })
+  </script>
+
+  <div class="whw5">상세주소</div>
+
+  <textarea id="adr2" placeholder="여기에 내용을 입력하세요"></textarea><br><br>
+  <script>
+    const adr2 = document.getElementById('adr2');
+
+    saveBtn.addEventListener('click', () => {
+      localStorage.setItem('sharedContent5', adr2.value);
+      window.location.href = 'index.html';
+    })
+
+  </script>
+
   <div class="preview">
     <img id="previewImg">
   </div>
@@ -67,7 +143,9 @@
   <label for="fileInput">사진 선택</label>
   <input id="fileInput" type="file" accept="image/*">
 
-  <button onclick="finish()">완료</button>
+  <button class="fin" onclick="finish()">완료</button>
+
+
 
   <script>
     let imgData = "";
@@ -86,8 +164,7 @@
 
     function finish() {
       if (!imgData) {
-        alert("사진을 선택하세요");
-        return;
+      
       }
       localStorage.setItem("selectedImage", imgData);
       location.href = "index.html";
@@ -96,4 +173,3 @@
 
 </body>
 </html>
-
