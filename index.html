@@ -5,12 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>메인 페이지</title>
   <link rel="stylesheet" href="style.css" />
+  <div class="wkr">-</div>
+  <div class="jj">모바일 신분증</div>
+  <div class="q">⇦</div>
+  <div class="out">2024.01.02</div>
+  <div class="tlwkd">경기도 안양시장</div>
+  
+
 
   <style>
  body {
   margin: 0;
   min-height: 100vh;
-  background: #f2f2f2;
+  background: #bebebe;
   font-family: sans-serif;
 
   display: flex;
@@ -18,13 +25,13 @@
   align-items: center;
 }
 
-/* 모바일 화면 폭 제한 */
+
 body > * {
-  max-width: 430px;
+  max-width: 200px;
   width: 100%;
 }
 
-/* 우측 상단 버튼 */
+
 .top-right {
   position: fixed;
   top: 12px;
@@ -35,19 +42,22 @@ body > * {
   border: none;
   font-size: 22px;
   cursor: pointer;
-  background: #333;
-  color: #fff;
+  background-color: white;
+  z-index: 2;
+
 }
 
-/* 이미지 영역 */
+
 .image-box {
-  width: 90%;
-  max-width: 240px;
+  width: 150px;
+  max-width: 400px;
   aspect-ratio: 6.5 / 9.5;
   border-radius: 18px;
   overflow: hidden;
-
   margin-top: 80px;
+  position: fixed;
+  top: 40px;
+  z-index: 1;
 }
 
 .image-box img {
@@ -57,9 +67,62 @@ body > * {
 }
   </style>
 </head>
-<body>
 
-  <button class="top-right" onclick="location.href='select.html'">+</button>
+<body>
+  <div id="output2" style="padding: 10px;  min-height: 50px; z-index: 2;"></div>
+
+  <script>
+    const output2 = document.getElementById('output2');
+    const content2 = localStorage.getItem('sharedContent2');
+    if (content2) {
+      output2.textContent = content2;
+    }
+  </script>
+    <div id="output3" style="padding: 10px;  min-height: 50px; z-index: 2;"></div>
+
+  <script>
+    const output3 = document.getElementById('output3');
+    const content3 = localStorage.getItem('sharedContent3');
+    if (content3) {
+      output3.textContent = content3;
+    }
+  </script>
+
+    <div id="output" style="padding:10px; min-height:50px; z-index: 2;"></div>
+
+  <script>
+    const output = document.getElementById('output');
+
+    const content = localStorage.getItem('sharedContent');
+    if (content) {
+      output.textContent = content;
+    }
+  </script>
+
+    <div id="output4" style="padding: 10px;  min-height: 50px; z-index: 2;"></div>
+
+  <script>
+    const output4 = document.getElementById('output4');
+    const content4 = localStorage.getItem('sharedContent4');
+    if (content4) {
+      output4.textContent = content4;
+    }
+  </script>
+
+     <div id="output5" style="padding: 10px;  min-height: 50px; z-index: 2;"></div>
+
+  <script>
+    const content5 = localStorage.getItem('sharedContent5');
+    if (content5) {
+      output5.textContent = content5;
+    }
+  </script>
+
+
+
+
+
+  <button class="top-right" onclick="location.href='select.html'">≡</button>
 
     <div class="bar-container">
     <div class="bar"></div>
@@ -69,12 +132,46 @@ body > * {
     <img id="mainImg">
   </div>
 
+  <div class="shadow-box">
+     <div class="top-box"></div>
+
+</div>
+  
+<div class="timer">
+  남은시간: <span id="time" class="time-number">30</span>
+</div>
+
+<script src="timer.js"></script>
+
   <script>
     const saved = localStorage.getItem("selectedImage");
     if (saved) {
       document.getElementById("mainImg").src = saved;
     }
   </script>
+
+<script>  if (content3) {
+    if (content3.length > 1) {
+      output3.textContent =
+        content3[0] + "*".repeat(content3.length - 1);
+    } else {
+      output3.textContent = "*";
+    } }
+ const toggle  = document.getElementById('idToggle');
+     const savedImg = localStorage.getItem('selectedImage');
+       function mask(text) {
+    if (!text) return "";
+    if (text.length === 1) return "*";
+    return text[0] + "*".repeat(text.length - 1);
+  }
+</script>
+
+<script>
+  if (content5) {
+    output5.textContent = "*".repeat(content5.length);
+  }
+</script>
+
 
 </body>
 </html>
