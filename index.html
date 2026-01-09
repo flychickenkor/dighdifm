@@ -47,16 +47,25 @@ body > * {
 
 }
 
+  @media (max-width: 768px) {
+  .image-box {
+    width: 30%;
+    max-width: 100%;
+    aspect-ratio: 9 / 16;
+    overflow: hidden;
+  }
+}
+
 .image-box {
-  width: 50%;
+  width: 30%;
   max-width: 100%;
   aspect-ratio: 9 / 16;
-  border-radius: 18px;
+  border-radius: 10px;
   overflow: hidden;
   margin-top: 80px;
   position: absolute;
   top: 10%;
-  z-index: 1;
+  z-index: 2;
 }
 
 .image-box img {
@@ -174,4 +183,3 @@ body > * {
 
 </body>
 </html>
-
