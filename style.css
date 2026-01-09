@@ -15,7 +15,7 @@
     overflow: hidden;
     border-radius: 13%;
     position: fixed;
-    bottom: 59%;
+    bottom: 20%;
     right: 15%;
     z-index: 2;
   }
@@ -57,7 +57,7 @@
 
 .timer {
   position: relative;
-  bottom: 56%;
+  bottom: 20%;
   left: 15%;
   color: #8a8a8a;
   font-size: 12px;
