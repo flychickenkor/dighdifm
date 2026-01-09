@@ -8,15 +8,15 @@
   }
 
   .bar-container {
-    max-width: 300px;
-    height: 5px;
+    max-width: 70%;
+    height: 0.5%;
     background: #ddd;
     position: relative;
     overflow: hidden;
-    border-radius: 30px;
+    border-radius: 13%;
     position: fixed;
-    bottom: 480px;
-    right: 45px;
+    bottom: 59%;
+    right: 15%;
     z-index: 2;
   }
 
@@ -48,16 +48,17 @@
   transition: color 0.3s ease;
 }
 .time-number {
-  position: fixed;
-  bottom: 460px;
-  right: 280px;
+  margin-top: 50%;  
+  position: absolute;
   font-size: 12px;
+  z-index: 3;
+  left: 4%;
 }
 
 .timer {
-  position: fixed;
-  bottom: 460px;
-  right: 145px;
+  position: relative;
+  bottom: 56%;
+  left: 15%;
   color: #8a8a8a;
   font-size: 12px;
 }
@@ -72,15 +73,14 @@
     0 2px 6px rgba(0, 0, 0, 0.2); 
   
   max-width: 300px;
-  position: absolute;
-  height: 450px;
-  top: 100px;     
+  position: relative;
+  height: 60%;
+     
   z-index: 0;
 }
 
 #output {
-  position: fixed;
-  right: 138px;
+  position: relative;
   font-weight:bold ;
   font-size: 20px;
 }
