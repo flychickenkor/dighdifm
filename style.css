@@ -16,7 +16,6 @@
     overflow: hidden;
     border-radius: 13%;
     position: absolute;
-    top: 50%;
     left: 50%;
     z-index: 2;
     transform: translate(-50%, -50%);
@@ -24,7 +23,7 @@
 
   @media (max-width: 768px) {
   .bar-container {
-    top: 250px;
+    top: 280px;
     right: 16px;
     max-width: 70%;
   }
