@@ -104,8 +104,8 @@
 
   @media (max-width: 768px) {
   .output {
-    top: 310px;
-    right: 13px;
+    top: 360px;
+    right: 10px;
   }
 }
 #output {
@@ -115,7 +115,7 @@
 }
 
 #saveBtn {
-  position: absolute;
+  position: fixed;
   background-color: rgba(73, 73, 73, 0.541);
   height: 35px;
   width: 60px;
@@ -134,7 +134,7 @@
 }
 
 #userInput {
-  position: absolute;
+  position: fixed;
   top: 35px;
   left: 10px;
 }
@@ -159,7 +159,7 @@
 }
 
 .wkr {
-  position: fixed;
+  position: absolute;
   bottom: 390px;
   z-index: 2;
   left: 100px;
