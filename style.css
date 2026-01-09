@@ -23,7 +23,7 @@
 
   @media (max-width: 768px) {
   .bar-container {
-    top: 290px;
+    top: 300px;
     right: 16px;
     max-width: 70%;
   }
@@ -101,7 +101,8 @@
 
   @media (max-width: 768px) {
   .output {
-    top: 310px;
+    bottom: 100px;
+    left: 10px;
   }
 }
 #output {
