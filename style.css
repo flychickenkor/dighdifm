@@ -56,20 +56,18 @@
 
     @media (max-width: 768px) {
   .time-number {
-    top: 320px;
-    right: 16px;
+    left: 25%;
   }
 }
 .time-number {
   color: #4da3ff;
   transition: color 0.3s ease;
 }
-.time-number {
-  margin-top: 50%;  
+.time-number {  
   position: absolute;
   font-size: 12px;
   z-index: 3;
-  left: 4%;
+  left: 25%;
 }
 
   @media (max-width: 768px) {
@@ -104,7 +102,7 @@
 
   @media (max-width: 768px) {
   .output {
-    top: 360px;
+    top: 400px;
     right: 10px;
   }
 }
@@ -158,11 +156,16 @@
   font-weight: bold;
 }
 
+  @media (max-width: 768px) {
+  .wkr {
+bottom: 38.3%;
+left: 24.6%;
+  }
+}
+
 .wkr {
-  position: absolute;
-  bottom: 390px;
+  position: fixed;
   z-index: 2;
-  left: 100px;
 }
 
 .whw3 {
